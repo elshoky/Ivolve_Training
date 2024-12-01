@@ -62,6 +62,7 @@ Script in Directory
 
 
 Making the Script Executable
+![Making the Script Executable](3.JPG)
 
 Running the Script
 

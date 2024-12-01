@@ -29,6 +29,21 @@ Before running the script, ensure:
 ### Step 1: Create the `ping_server` Script
 ![Script](images/script.JPG)
 
+### Step 2: Make Executable the `ping_server` Script
+![Script](images/3.JPG)
+
+### Step 3: Run the `ping_server` Script
+![Script](images/4.JPG)
+
+### Step 2: List Files
+![Script](images/5.JPG)
+
+### Step 6: Checking
+![Script](images/6.JPG)
+
+
+
+
 ## How to Use
 
 ### 1. Clone the Repository

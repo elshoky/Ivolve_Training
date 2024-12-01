@@ -35,10 +35,10 @@ Before running the script, ensure:
 ### Step 3: Run the `ping_server` Script
 ![Script](images/4.JPG)
 
-### Step 2: List Files
+### Step 4: List Files
 ![Script](images/5.JPG)
 
-### Step 6: Checking
+### Step 5: Checking
 ![Script](images/6.JPG)
 
 

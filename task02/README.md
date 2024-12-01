@@ -20,7 +20,34 @@ Before running the script, ensure:
 1. Your system is connected to the internet and has a working SMTP client (`msmtp`) installed.
 2. **msmtp** and **msmtp-mta** are installed for sending emails.
 ---
-## steps
+## Steps 
+### Step 1: Install required packegs
+![Script](images/1.JPG)
+
+### Step 2: Do it for Security
+![Script](images/2.JPG)
+
+### Step 3: Configure msmtp
+![Script](images/3.JPG)
+
+### Step 4: Create Script
+![Script](images/5.JPG)
+
+### Step 5: Make it Executable
+![Script](images/6.JPG)
+
+### Step 6: Run Script
+![Script](images/7.JPG)
+
+### Step 7: Cheching The Alert that Send to email
+![Script](images/8.JPG)
+
+### Step 8: Schedule By crontab
+![Script](images/9.JPG)
+
+### Step 9: Syntax cron
+![Script](images/10.JPG)
+
 
 
 To install the required packages, run:

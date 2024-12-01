@@ -4,7 +4,7 @@
 This guide explains how to:
 1. Create a new group called `ivolve`.
 2. Create a new user named `luffy` and assign the user to the `ivolve` group.
- ![Create Group and User](images/1.jpg)
+ ![Create Group and User](Ivolve_Training/task01/images/1.jpg)
 3. Grant the user `luffy` the necessary permissions to install Nginx with elevated privileges without requiring a password.
     ![Grant Permissions](task01/images/2.jpg)
 4. Install Nginx using the `luffy` user.

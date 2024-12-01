@@ -25,6 +25,9 @@ Before running the script, ensure:
 3. Proper permissions to create and write files in the target directory.
 
 ---
+## Steps to Use the Script
+### Step 1: Create the `ping_server` Script
+![Script](task03/images/script.JPG)
 
 ## How to Use
 
@@ -62,7 +65,7 @@ Script in Directory
 
 
 Making the Script Executable
-![Making the Script Executable](3.JPG)
+
 
 Running the Script
 

@@ -6,13 +6,13 @@ This guide explains how to:
 2. Create a new user named `luffy` and assign the user to the `ivolve` group.
  ![Create Group and User](1.jpg)
 3. Grant the user `luffy` the necessary permissions to install Nginx with elevated privileges without requiring a password.
-    ![Grant Permissions](task01/images/2.jpg)
+    ![Grant Permissions](2.jpg)
 4. Install Nginx using the `luffy` user.
-    ![Install Nginx](task01/images/3.jpg)
+    ![Install Nginx](3.jpg)
 5. Verify Nginx installation.
-    ![Verify Installation](task01/images/4.jpg)
+    ![Verify Installation](4.jpg)
 6. Test the ability to install `httpd` (verify the sudo permission restriction).
-    ![Test Permissions](task01/images/5.jpg)
+    ![Test Permissions](5.jpg)
 
 ---
 

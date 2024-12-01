@@ -27,7 +27,7 @@ Before starting, ensure that:
 
 ---
 
-## Step 1: Create the Group `ivolve`
+## Steps : User and Group Management
 
 To begin, create a new group named `ivolve`. This group will be used to assign the user `luffy`.
 

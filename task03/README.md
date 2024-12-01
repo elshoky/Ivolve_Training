@@ -27,7 +27,7 @@ Before running the script, ensure:
 ---
 ## Steps to Use the Script
 ### Step 1: Create the `ping_server` Script
-![Script](task03/images/script.JPG)
+![Script](script.JPG)
 
 ## How to Use
 

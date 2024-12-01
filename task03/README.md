@@ -16,7 +16,7 @@ Ensure that your system has:
 1. **Clone the Repository or Download the Script**  
    Clone the repository or download the script to your local machine.
 	
-	![Create Group and User](script.JPG)
+	![Create Group and User](task03/images/script.JPG)
 	
 2. **Set the Target Directories**  
    The script saves the results of the ping test into the following files:

@@ -10,6 +10,7 @@ This guide explains how to:
 4. Install Nginx using the `luffy` user.
     ![Install Nginx](3.jpg)
 5. Verify the Nginx installation.
+ 
    ![Verify Installation](4.JPG)
 6. Test the ability to install `httpd` (verify the sudo permission restriction).
         ![Test Permissions](5.JPG)

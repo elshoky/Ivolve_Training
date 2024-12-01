@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Define the subnet to check
+subnet="192.168.116"
+reachable_file="/home/elshoky/Ivolve_training/task03/reachable_servers.txt"
+unreachable_file="/home/elshoky/Ivolve_training/task03/unreachable_servers.txt"
+
+# Create directories if they don't exist
+mkdir -p $(dirname "$reachable_file")
+mkdir -p $(dirname "$unreachable_file")
+
+# Start the log with a timestamp
+echo "Ping Test Started at $(date)" > "$reachable_file"
+echo "Ping Test Started at $(date)" > "$unreachable_file"
+
+# Loop through all possible IP addresses in the subnet (1 to 254)
+for i in {1..254}
+do
+    # Ping the server with a timeout of 1 second
+    if ping -c 1 -W 1 "${subnet}.${i}" &> /dev/null; then
+        # If ping is successful, log the reachable server
+        echo "server ${subnet}.${i} is success and running" >> "$reachable_file"
+    else
+        # If ping fails, log the unreachable server
+        echo "server ${subnet}.${i} is unreachable" >> "$unreachable_file"
+    fi
+done
+
+# End the log with a timestamp
+echo "Ping Test Finished at $(date)" >> "$reachable_file"
+echo "Ping Test Finished at $(date)" >> "$unreachable_file"
+
+echo "Ping test completed. Results saved to $reachable_file and $unreachable_file."

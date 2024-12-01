@@ -11,30 +11,31 @@ Before running this script, you need to have the following installed:
 
 ## Installation
 
-### 1. Install msmtp & Configure mstprc 
+### 1. Install msmtp
 
 ```bash
 sudo apt update
 sudo apt install msmtp msmtp-mta
-nano ~/.msmtprc
 
-## 2. Create the Disk Usage Check Script
+### 2.  Create the Disk Usage Check Script
 
-```bash
-nano ~/ivolve_training/task02/check_disk_usage
+nano ~/check_disk_usage.sh
+
 chmod +x ~/check_disk_usage.sh
 
-## 3. Schedule the Script with Cron
+### 4. Schedule the Script with Cron
 
 crontab -e
-0 17 * * * /home/elshoky/check_disk_usage.sh
+0 17 * * * /home/elshoky/Ivolve_training/task02/check_disk_usage
 
-## How It Works
+### 5. How It Works
+
 The script checks the disk usage of the root filesystem (/).
-If the disk usage exceeds 10%, the script sends an email to the configured address (elshoky.360@gmail.com) using msmtp.
-You can modify the threshold in the script if you want a different alert threshold.
+If the disk usage exceeds 90%, the script sends an email to the configured address (elshoky.360@gmail.com) using msmtp.
+You can modify the threshold in the script if you want a different alert threshold
 
-## Customization
+### 6. Customization
+
 Email Address: Change the email address in the script to receive alerts at a different address.
 Threshold: You can change the threshold percentage to a value of your choice (e.g., 80% or 95%).
 
@@ -44,3 +45,4 @@ Threshold: You can change the threshold percentage to a value of your choice (e.
 - The README provides a complete guide to set up, configure, and use the disk space alert script.
 
 Let me know if you need any further edits or details!
+

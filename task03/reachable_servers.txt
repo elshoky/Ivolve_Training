@@ -1,0 +1,5 @@
+Ping Test Started at 01 ديس, 2024 EET 04:50:58 م
+server 192.168.116.2 is success and running
+server 192.168.116.135 is success and running
+server 192.168.116.137 is success and running
+Ping Test Finished at 01 ديس, 2024 EET 04:55:12 م

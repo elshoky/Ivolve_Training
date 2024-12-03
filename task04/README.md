@@ -32,6 +32,7 @@ sudo nano /etc/bind/db.ivolve.com
 
 ### 4. Restart bind9.service
 sudo systemctl restart bind9
+
 ![Restart Service](./images/6.JPG)
 
 ### 5. Test DNS Resolution

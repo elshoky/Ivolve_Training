@@ -72,17 +72,17 @@ sudo fdisk /dev/sdb
 
 ### **13. Create Physical-Volume & Create Volume-Group & Create Logical-Volume
 
-![Create Physical-Volume & Create Volume-Group & Create Logical-Volume](lv1.JPG)
+![Create Physical-Volume & Create Volume-Group & Create Logical-Volume](images/lv1.JPG)
 
-### **13. Make format by ext4 for logical volume & Presistent Mount
+### **14. Make format by ext4 for logical volume & Presistent Mount
 
-![Make format by ext4 for logical volume & Presistent Mount](lv2.JPG)
+![Make format by ext4 for logical volume & Presistent Mount](images/lv2.JPG)
 
-### **14. Extended Logical Volume 
+### **15. Extended Logical Volume 
 
-![Extended Logical Volume](extened-lv.JPG)
+![Extended Logical Volume](images/extened-lv.JPG)
 
-### **15. Check all what have Done!
+### **16. Check all what have Done!
 
 ![Check all what have Done!](images/check.JPG)
 		---

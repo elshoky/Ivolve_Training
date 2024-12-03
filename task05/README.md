@@ -80,7 +80,7 @@ sudo fdisk /dev/sdb
 
 ### **15. Extended Logical Volume 
 
-![Extended Logical Volume](images/extened-lv.JPG)
+![Extended Logical Volume](images/extended-lv.JPG)
 
 ### **16. Check all what have Done!
 

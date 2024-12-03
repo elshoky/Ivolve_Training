@@ -1,17 +1,60 @@
-# Disk Space Check and Alert Script
+# Disk Space Monitoring Script
 
-This script automates the process of checking the disk space usage of the root filesystem (`/`) on an Ubuntu server. If the disk usage exceeds a specified threshold (90%), the script sends an email alert to notify the user.
+This repository contains a script to monitor the disk usage of the root filesystem (`/`). If the disk usage exceeds a specified threshold (90% by default), it sends an email alert to a configured address. You can customize the script to adjust the threshold and the email recipient.
+
+---
+
+## Features
+
+- Monitors the disk usage of the root filesystem (`/`).
+- Sends email alerts if disk usage exceeds the defined threshold (default is 90%).
+- Customizable email recipient and alert threshold.
+- Easy to configure and extend.
+
+---
 
 ## Prerequisites
 
-Before running this script, you need to have the following installed:
+Before running the script, ensure:
 
-1. **msmtp**: A lightweight SMTP client used to send emails.
-2. **Cron**: A job scheduler that runs the script at a specified time.
+1. Your system is connected to the internet and has a working SMTP client (`msmtp`) installed.
+2. **msmtp** and **msmtp-mta** are installed for sending emails.
+---
+## Steps 
+### Step 1: Install required packegs
+![Script](images/1.JPG)
 
-## Installation
+### Step 2: Do it for Security
+![Script](images/2.JPG)
 
-### 1. Install msmtp
+### Step 3: Configure msmtp
+![Script](images/3.JPG)
+
+### Step 4: Create Script
+![Script](images/5.JPG)
+
+### Step 5: Make it Executable
+![Script](images/6.JPG)
+
+### Step 6: Run Script
+![Script](images/7.JPG)
+
+### Step 7: Cheching The Alert that Send to email
+![Script](images/8.JPG)
+
+### Step 8: Schedule By crontab
+![Script](images/9.JPG)
+
+### Step 9: Syntax cron
+![Script](images/10.JPG)
+
+
+
+To install the required packages, run:
+
+```bash
+sudo apt update
+sudo apt install msmtp msmtp-mta
 
 ```bash
 sudo apt update

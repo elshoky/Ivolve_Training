@@ -1,59 +1,114 @@
 # Ping Server Script
 
-This script pings all the servers in the subnet `192.168.116.x` (where `x` is a number between 1 and 254) and logs the results into two files:
-- **reachable_servers.txt**: Servers that responded successfully to the ping.
-- **unreachable_servers.txt**: Servers that did not respond to the ping.
+This repository contains a Bash script to check the availability of servers within a specified subnet (`192.168.116.x`, where `x` ranges from 1 to 254). The script pings each server in the subnet and logs the results into two separate files:
+
+- **`reachable_servers.txt`**: Servers that responded successfully to the ping.
+- **`unreachable_servers.txt`**: Servers that did not respond to the ping.
+
+---
+
+## Features
+
+- Pings all IP addresses in the subnet `192.168.116.x`.
+- Saves results to `reachable_servers.txt` and `unreachable_servers.txt`.
+- Automatically creates required directories and files if they do not exist.
+- Easy to execute and extend.
+
+---
 
 ## Prerequisites
 
-Ensure that your system has:
-- A working network connection.
-- Bash installed (the script is written in Bash).
-- Proper permissions to write to the directory where the log files will be stored.
+Before running the script, ensure:
 
+1. Your system is connected to the `192.168.116.0/24` network.
+2. Bash is installed (default on Ubuntu).
+3. Proper permissions to create and write files in the target directory.
+
+---
 ## Steps to Use the Script
+### Step 1: Create the `ping_server` Script
+![Script](images/script.JPG)
 
-1. **Clone the Repository or Download the Script**  
-   Clone the repository or download the script to your local machine.
-	
-	![Create Group and User](script.JPG)
-	
-2. **Set the Target Directories**  
-   The script saves the results of the ping test into the following files:
-   - `reachable_servers.txt`
-   - `unreachable_servers.txt`
+### Step 2: Make Executable the `ping_server` Script
+![Script](images/3.JPG)
 
-   These files will be created in the following directory:  
-   `~elshoky/Ivolve_training/task03/`
+### Step 3: Run the `ping_server` Script
+![Script](images/4.JPG)
 
-   If the directories do not exist, the script will create them automatically.
+### Step 4: List Files
+![Script](images/5.JPG)
 
-3. **Make the Script Executable**  
-   After downloading or cloning the script, navigate to the directory containing the script, and then run the following command to make it executable:
-   ```bash
-   chmod +x ping_servers.sh
-
-	![Create Group and User](3.JPG)
-
-4. **Run the Script
-   ./ping_servers.sh
-
-	        ![Create Group and User](4.JPG)
-
-5. **Check the Results
-
-   cat ~elshoky/Ivolve_training/task03/reachable_servers.txt
-   cat ~elshoky/Ivolve_training/task03/unreachable_servers.txt
-
-	        ![List-Files](5.JPG)
-		![Show-Reachable&UnreachableFiles ](6.JPG)
+### Step 5: Checking
+![Script](images/6.JPG)
 
 
-### Instructions:
 
-1. **Save the above content as `README.md`** in the root of your project.
-2. **Ensure the paths** (e.g., `~/Ivolve_training/task03/`) are correct and accessible.
-3. **Commit and push the `README.md`** file to your GitHub repository.
 
-This `README.md` will help other users understand the process and quickly set up and run the script. Let me know if you'd like to make any changes or additions!
+## How to Use
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/elshoky/Ivolve_Training.git
+cd Ivolve_Training/task03
+2. Make the Script Executable
+bash
+Copy code
+chmod +x ping_servers.sh
+3. Run the Script
+Execute the script to start the pinging process:
+
+bash
+Copy code
+./ping_servers.sh
+4. View the Results
+The script outputs results to:
+
+reachable_servers.txt: Lists reachable servers.
+unreachable_servers.txt: Lists unreachable servers.
+To check the results:
+
+bash
+Copy code
+cat ~/Ivolve_training/task03/reachable_servers.txt
+cat ~/Ivolve_training/task03/unreachable_servers.txt
+Files in This Repository
+ping_servers.sh: The main Bash script for server availability testing.
+README.md: Documentation for the script.
+images/: Example screenshots showing the script in action.
+Example Outputs
+Script in Directory
+
+
+Making the Script Executable
+
+
+Running the Script
+
+Result Files
+Listing Files
+
+Viewing Results
+
+Notes
+If the directory ~/Ivolve_training/task03/ does not exist, the script will create it automatically.
+To schedule this script to run automatically, consider using a cron job.
+Contributing
+Feel free to fork this repository, submit issues, or create pull requests to contribute.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+vbnet
+Copy code
+
+You can save this directly as `README.md` and upload it to your GitHub repository. Let me know if you need help with additional formatting or edits!
+
+
+
+
+
+
+
+
+
 

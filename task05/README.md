@@ -24,7 +24,7 @@ This guide provides step-by-step instructions for attaching and managing a 15GB 
 ### **2. Identify the New Disk**
 
  Log in to the VM:
-   ```bash
+   
    ssh user@VM_IP
 
 ### **3. Create Two new Partition

@@ -16,7 +16,7 @@ Set up and configure BIND9 as a DNS server to resolve a domain (`ivolve.com`) an
 
 ### 1. Install BIND9
 To install BIND9 and related tools:
-```bash
+
 sudo apt update
 sudo apt install bind9 bind9utils bind9-doc -y
 ![Intallation](./images/1.JPG)
@@ -38,4 +38,4 @@ sudo systemctl restart bind9
 sudo nano /etc/resolv.conf
 nameserver 192.168.116.139
 dig ivolve.com
-![Test](images/8.JPG)
+![Test](./images/8.JPG)

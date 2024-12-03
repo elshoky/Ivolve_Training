@@ -9,7 +9,7 @@ This lab demonstrates how to generate SSH keys, configure key-based SSH authenti
 
 ### 1. **Generate SSH Keys**  
 Run the following command to generate a public-private key pair:
-```bash
+
 ssh-keygen -t rsa -b 2048 
 
 ![Generate Key and add keys](images/3.JPG)
@@ -19,7 +19,7 @@ ssh-keygen -t rsa -b 2048
 ![Create or edit the SSH configuration file](images/2.JPG)
 
 ### 3. **Test Simplified SSH Command**
-```bash
+
 ssh ivolve
 
 ![Test](images/3.JPG)

@@ -24,8 +24,8 @@ This Ansible playbook automates the configuration of a web server.
 
 ## Screenshots to verfiy webserver nodes configration:
     
-    ![alt text](images/node01.JPG)
-    ![alt text](images/node02.JPG)
+  ![alt text](images/node01.JPG)
+  ![alt text](images/node02.JPG)
 
 **Remember to replace the placeholder image links with actual image URLs or embed the images directly into your README file using Markdown syntax.**
 

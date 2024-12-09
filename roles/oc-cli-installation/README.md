@@ -1,7 +1,7 @@
 ## Diagram of the Ansible Playbook Installation Process
 
 <p align="center">
-  <img src="images/diagram.webp" alt="Network Diagram of Ansible Playbook Installation Process" />
+  <img src="images/diagram.JPG" alt="Network Diagram of Ansible Playbook Installation Process" />
 </p>
 
 

@@ -1,5 +1,9 @@
 # MySQL Setup with Ivove_db
 
+<p align="center">
+  <img src="images/mysql.JPG" alt="Ansible Dynamic Inventory Setup" />
+</p>
+
 This Ansible playbook sets up MySQL with the Ivove_db database and configures remote access for the Ivove user. It also secures MySQL installation and ensures the MySQL service is properly configured and running.
 
 ## Prerequisites

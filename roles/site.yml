@@ -1,0 +1,7 @@
+---
+- name: Apply Roles
+  hosts: nodes
+  roles:
+    - jenkins-installation
+    - docker-installation
+    - oc-cli-installation  

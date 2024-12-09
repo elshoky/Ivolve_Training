@@ -1,0 +1,24 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Download the OC keyring file using command
+  ansible.builtin.command:
+    cmd: "curl -fsSL https://github.com/openshift/okd/releases/download/4.5.0-0.okd-2020-07-14-153706-ga/openshift-client-linux-4.5.0-0.okd-2020-07-14-153706-ga.tar.gz -o /home/ubuntu/openshift-client-linux-4.5.0-0.okd-2020-07-14-153706-ga.tar.gz"
+    creates: /home/ubuntu/openshift-client-linux-4.5.0-0.okd-2020-07-14-153706-ga.tar.gz
+
+
+- name: Extract OC.tar
+  ansible.builtin.unarchive:
+    src: /home/ubuntu/openshift-client-linux-4.5.0-0.okd-2020-07-14-153706-ga.tar.gz
+    dest: /usr/local/bin/
+    remote_src: yes
+
+- name: Execute oc version
+  ansible.builtin.shell: oc version
+  register: oc_version_output
+
+- name: Display oc version output
+  ansible.builtin.debug:
+    var: oc_version_output.stdout

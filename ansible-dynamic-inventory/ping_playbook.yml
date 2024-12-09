@@ -1,0 +1,7 @@
+- name: ping dynamic inventory
+  hosts: nodes
+
+
+  tasks:
+    - name: ping dynamic inventory
+      ping:

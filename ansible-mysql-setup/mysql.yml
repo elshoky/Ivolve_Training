@@ -1,0 +1,86 @@
+- name: Setup Mysql with Ivove_db 
+  hosts: nodes
+  vars_files:
+    - credentialas.yml
+  
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+    
+    - name: Installing Mysql
+      package:
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+      loop: 
+        - mysql-server
+        - mysql-client
+        - python3-mysqldb
+
+
+    
+    - name: Start and enable mysql service
+      service:
+        name: mysql
+        state: started
+        enabled: yes
+    
+    - name: Ensure MySQL configuration is correct and MySQL is started
+      lineinfile:
+        path: /etc/mysql/mysql.conf.d/mysql.cnf 
+        regexp: '^skip-grant-tables'
+        line: 'skip-grant-tables'
+        state: present
+      notify: 
+        - Restart mysql
+
+    - name: Execute Mysql secure installation
+      expect:
+        command: mysql_secure_installation
+        responses:
+          'Enter password for user root:': "{{ root_password }}"
+          'Press y|Y for Yes, any other key for No:': 'Y'
+          'Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG:': "{{ password_valadiation_policy }}"
+          'Remove anonymous users? (Press y|Y for Yes, any other key for No) :': 'Y'
+          'Disallow root login remotely? (Press y|Y for Yes, any other key for No) :': 'Y'
+          'Remove test database and access to it? (Press y|Y for Yes, any other key for No) :': 'Y'
+          'Reload privilege tables now? (Press y|Y for Yes, any other key for No) :': 'Y'
+      environment: 
+        MYSQL_PWD: "{{ root_password }}"
+    
+
+    - name: Create Ivolve user with remote access
+      mysql_user:
+        name: "{{ admin_user }}"
+        password: "{{ admin_password }}"
+        priv: '*.*:ALL'
+        host: '%'
+        append_privs: yes
+        login_user: root
+        login_password: "{{ root_password }}"
+        state: present
+
+    - name: Create database Ivolve
+      mysql_db:
+        name: "{{ db_name }}"
+        state: present
+        login_user: root
+        login_password: "{{ root_password }}"
+
+    - name: Enable remote login to mysql
+      lineinfile:
+        path: /etc/mysql/mysql.conf.d/mysqld.cnf
+        regexp: '^bind-address\s*=\s*127.0.0.1'
+        line: 'bind-address = 0.0.0.0'
+        backup: yes
+      notify: 
+        - Restart mysql
+
+   
+  
+  handlers:
+    - name: Restart mysql
+      service:
+        name: mysql
+        state: restarted

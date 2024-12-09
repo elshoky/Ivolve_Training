@@ -1,0 +1,6 @@
+---
+- name: Install Apache using Ansible Galaxy Role
+  hosts: nodes
+  roles:
+    - geerlingguy.apache
+

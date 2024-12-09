@@ -1,0 +1,43 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install required packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages }}"
+
+- name: Download Jenkins keyring using wget
+  ansible.builtin.command:
+    cmd: wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    creates: /usr/share/keyrings/jenkins-keyring.asc
+
+
+- name: Add Jenkins repository
+  ansible.builtin.apt_repository:
+    repo: "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian binary/"
+    state: present
+    filename: jenkins
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install Jenkins
+  apt:
+    name: jenkins
+    state: present
+  notify:
+    - start service and enable
+
+- name: Show Jenkins initial admin password
+  command: cat /var/lib/jenkins/secrets/initialAdminPassword
+  register: jenkins_initial_password
+  become: true
+
+- name: Print Jenkins initial admin password
+  debug:
+    msg: "Jenkins initial admin password is: {{ jenkins_initial_password.stdout }}"
+

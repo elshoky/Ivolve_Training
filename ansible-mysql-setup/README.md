@@ -61,8 +61,8 @@ You can save this as a `README.md` file in your repository to document the playb
 ```
 ## Apply-Playbook Screenshot:
  	
-	![alt text](images/apply-playbook.JPG)
+![alt text](images/apply-playbook.JPG)
 
 ## Verfiy all set-up mysql 
 
-        ![alt text](images/verfiy.JPG)
+![alt text](images/verfiy.JPG)

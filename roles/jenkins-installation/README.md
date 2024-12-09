@@ -1,7 +1,7 @@
 ## Diagram of the Ansible Playbook Installation Process
 
 <p align="center">
-  <img src="Installing-Jenkins-using-Ansible.webp" alt="Diagram" />
+  <img src="Installing-Jenkins-using-Ansible.JPG" alt="Diagram" />
 </p>
 
 

@@ -1,7 +1,7 @@
 ## Diagram of the Ansible Playbook Installation Process
 
 <p align="center">
-  <img src="images/docker.webp" alt="Network Diagram of Ansible Playbook Installation Process" />
+  <img src="images/docker.JPG" alt="Network Diagram of Ansible Playbook Installation Process" />
 </p>
 
 
@@ -83,9 +83,9 @@ These dependencies ensure that the playbook can successfully install Docker and 
 ScreenShots
 ----------------
 
-	![Tasks Running Successfully](images/tasks-done.JPG)	       
+![Tasks Running Successfully](images/tasks-done.JPG)	       
        
-        ![Run Docker Hello World to Check](images/verfiy-docker.JPG)
+![Run Docker Hello World to Check](images/verfiy-docker.JPG)
 
 
 

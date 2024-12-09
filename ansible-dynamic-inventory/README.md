@@ -1,7 +1,7 @@
 # Ansible Dynamic Inventories and Apache Installation
 
 <p align="center">
-  <img src="diagram.JPG" alt="Ansible Dynamic Inventory Setup" />
+  <img src="images/diagram.JPG" alt="Ansible Dynamic Inventory Setup" />
 </p>
 
 ## Overview

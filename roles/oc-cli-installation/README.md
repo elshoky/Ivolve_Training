@@ -1,4 +1,4 @@
-## Diagram of the Ansible Playbook Installation Process
+## Installing OpenShift CLI ‘OC’.
 
 <p align="center">
   <img src="images/diagram.JPG" alt="Network Diagram of Ansible Playbook Installation Process" />

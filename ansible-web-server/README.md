@@ -1,5 +1,9 @@
 # Ansible Playbook for Web Server Configuration
 
+<p align="center">
+  <img src="images/apache.JPG" alt="Ansible Dynamic Inventory Setup" />
+</p>
+
 This Ansible playbook automates the configuration of a web server.
 
 ## Prerequisites
